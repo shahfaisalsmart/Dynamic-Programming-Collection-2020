@@ -126,3 +126,28 @@ int main(){
 }
 ```
 ---
+## Dynamic Programming - `2`
+### Minimum number of Fibonacci jumps to reach end
+
+Find the length of the longest subsequence of a given sequence such that all elements of the subsequence are sorted in increasing order.
+
+#### `Input Format`
+First line is giving as N as Number of total element in an array.
+second line contains a<sub>1</sub>,a<sub>2</sub>,a<sub>3</sub>,a<sub>4</sub>,......a<sub>N</sub> as elements.
+
+#### `Output Format`
+Single integer which represent the length of the longest increasing subsequence.
+
+#### Input 1
+
+
+#### Output 1
+
+
+
+## C++ code 
+
+```cpp
+    COMING SOON
+```
+---
