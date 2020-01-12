@@ -21,8 +21,12 @@ Single integer which represent the length of the longest increasing subsequence.
 #### Input 1
 
 5
+
 [3, 10, 2, 1, 20]
 
 ### Output 1
 3
 
+```cpp
+  Coming soon
+```
