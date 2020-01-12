@@ -151,3 +151,34 @@ Single integer which represent the length of the longest increasing subsequence.
     COMING SOON
 ```
 ---
+
+## Dynamic Programming - `3`
+### Longest Common Subsequence 
+Given two sequences, find the length of longest subsequence present in both of them. A subsequence is a sequence that appears in the same relative order, but not necessarily contiguous.
+
+> For example, “abc”, “abg”, “bdf”, “aeg”, ‘”acefg”, .. etc are subsequences of “abcdefg”.
+
+**`Examples`**:
+LCS for input Sequences “ABCDGH” and “AEDFHR” is “ADH” of length 3.
+LCS for input Sequences “AGGTAB” and “GXTXAYB” is “GTAB” of length 4.
+#### `Input Format`
+First line is giving as N as Number of total element in an array.
+second line contains a<sub>1</sub>,a<sub>2</sub>,a<sub>3</sub>,a<sub>4</sub>,......a<sub>N</sub> as elements.
+
+#### `Output Format`
+Single integer which represent the length of the longest increasing subsequence.
+
+#### Input 1
+
+
+#### Output 1
+
+
+
+
+## C++ code 
+
+```cpp
+    COMING SOON
+```
+---
