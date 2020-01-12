@@ -212,7 +212,7 @@ int main(){
 }
 ```
 
-### C++ code `Iteratative`
+## C++ code `Iteratative`
 ```c++
 // BEGINNING WITH THE NAME OF ALMIGHTY GOD ALLAH
 // AUTHOR:: MOHAMMAD FAISAL
@@ -265,15 +265,11 @@ int main(){
 Given two string 'X' and string 'Y'. Find the length of longest Common substring.
 > For example, "faisal","faisalcity" the length of longest common substring is **6** ("faisal").
 
-**`Examples`**:
-- LCS for input Sequences “ABCDGH” and “AEDFHR” is “ADH” of length 3.
-- LCS for input Sequences “AGGTAB” and “GXTXAYB” is “GTAB” of length 4.
-
 #### `Input Format`
 First line given first string s, second line given second string t;
 
 #### `Output Format`
-Single integer which represent the length of the longest common subsequence.
+Single integer which represent the length of the longest common substring.
 
 #### Input 1
 zxabcdezy
@@ -289,7 +285,7 @@ yzabcdezx
     coming soon
 ```
 
-### C++ code `Iteratative`
+## C++ code `Iteratative`
 ```c++
     coming soon
 ```
