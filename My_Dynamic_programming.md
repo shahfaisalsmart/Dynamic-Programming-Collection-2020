@@ -170,6 +170,7 @@ Single integer which represent the length of the longest common subsequence.
 
 #### Input 1
 abcd
+
 bcde
 
 #### Output 1
@@ -213,7 +214,83 @@ int main(){
 
 ### C++ code `Iteratative`
 ```c++
+// BEGINNING WITH THE NAME OF ALMIGHTY GOD ALLAH
+// AUTHOR:: MOHAMMAD FAISAL
+
+#include<bits/stdc++.h>
+using namespace std;
+int solve(string s, string t, int n, int m)
+{
+
+    int dp[n+1][m+1];
+    
+    for(int i=0;i<=n;i++)
+    {
+        for(int j=0;j<=m;j++)
+        {
+            if(i==0 || j==0)
+                dp[i][j] =0;
+            else if(s[i-1]==t[j-1])
+                dp[i][j] = 1+ dp[i-1][j-1];
+            else
+                dp[i][j] = max(dp[i-1][j], dp[i][j-1]);
+        }
+    }
+
+    return dp[n][m];
+}
+int main(){
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+    cout.flush();
+
+    string s;
+    cin >> s;
+    int n = s.size();
+    string t;
+    cin >> t;
+    int m = t.size();
+    int res = solve(s,t,n,m);
+    cout<<res<<endl;
+    return 0;
+}
+
+```
+---
 
 
+## Dynamic Programming - `4`
+### Longest Common Substring
+
+Given two string 'X' and string 'Y'. Find the length of longest Common substring.
+> For example, "faisal","faisalcity" the length of longest common substring is **6** ("faisal").
+
+**`Examples`**:
+- LCS for input Sequences “ABCDGH” and “AEDFHR” is “ADH” of length 3.
+- LCS for input Sequences “AGGTAB” and “GXTXAYB” is “GTAB” of length 4.
+
+#### `Input Format`
+First line given first string s, second line given second string t;
+
+#### `Output Format`
+Single integer which represent the length of the longest common subsequence.
+
+#### Input 1
+zxabcdezy
+
+yzabcdezx
+
+#### Output 1
+6
+
+## C++ code `Recursive`
+
+```cpp
+    coming soon
+```
+
+### C++ code `Iteratative`
+```c++
+    coming soon
 ```
 ---
