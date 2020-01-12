@@ -161,24 +161,59 @@ Given two sequences, find the length of longest subsequence present in both of t
 **`Examples`**:
 - LCS for input Sequences “ABCDGH” and “AEDFHR” is “ADH” of length 3.
 - LCS for input Sequences “AGGTAB” and “GXTXAYB” is “GTAB” of length 4.
+
 #### `Input Format`
-First line is giving as N as Number of total element in an array.
-second line contains a<sub>1</sub>,a<sub>2</sub>,a<sub>3</sub>,a<sub>4</sub>,......a<sub>N</sub> as elements.
+First line given first string s, second line given second string t;
 
 #### `Output Format`
-Single integer which represent the length of the longest increasing subsequence.
+Single integer which represent the length of the longest common subsequence.
 
 #### Input 1
-
+abcd
+bcde
 
 #### Output 1
+3
 
-
-
-
-## C++ code 
+## C++ code `Recursive`
 
 ```cpp
-    COMING SOON
+    // BEGINNING WITH THE NAME OF ALMIGHTY GOD ALLAH
+// AUTHOR:: MOHAMMAD FAISAL
+
+#include<bits/stdc++.h>
+using namespace std;
+int solve(string s, string t, int n, int m)
+{
+    if(n==0 || m==0)
+        return 0;
+
+    if(s[n-1]==t[m-1])
+        return 1+solve(s,t,n-1,m-1);
+    else 
+        return max(solve(s,t,n,m-1),solve(s,t,n-1,m));
+
+}
+int main(){
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+    cout.flush();
+
+    string s;
+    cin >> s;
+    int n = s.size();
+    string t;
+    cin >> t;
+    int m = t.size();
+    int res = solve(s,t,n,m);
+    cout<<res<<endl;
+    return 0;
+}
+```
+
+### C++ code `Iteratative`
+```c++
+
+
 ```
 ---
