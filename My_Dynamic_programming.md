@@ -178,7 +178,7 @@ bcde
 ## C++ code `Recursive`
 
 ```cpp
-    // BEGINNING WITH THE NAME OF ALMIGHTY GOD ALLAH
+// BEGINNING WITH THE NAME OF ALMIGHTY GOD ALLAH
 // AUTHOR:: MOHAMMAD FAISAL
 
 #include<bits/stdc++.h>
