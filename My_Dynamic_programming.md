@@ -24,9 +24,53 @@ Single integer which represent the length of the longest increasing subsequence.
 
 [3, 10, 2, 1, 20]
 
-### Output 1
+#### Output 1
 3
 
+## C++ code with O(N<sup>2</sup>) time complexity
+
 ```cpp
-  Coming soon
+// BEGINNING WITH THE NAME OF ALMIGHTY GOD ALLAH
+// AUTHOR:: MOHAMMAD FAISAL
+#include<bits/stdc++.h>
+using namespace std;
+int solve(int * arr, int n)
+{
+    int * dp = new int[n];
+
+    dp[0] = 1;
+
+    for(int i=1;i<n;i++)
+    {
+        dp[i] = 1;
+        for(int j=0;j<i;j++)
+        {
+            if(arr[i]<arr[j] && dp[i] < dp[j]+1)
+                dp[i] = dp[j] +1;
+        }
+    }
+    int res = *max_element(dp,dp+n);
+    delete[] dp;
+    return res;
+}
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+    cout.flush();
+
+    int n;
+    cin >> n;
+
+    int * arr = new int[n];
+
+    for(int i=0;i<n;i++)
+    {
+        cin >> arr[i];
+    }
+
+    int result = solve(arr,n);
+    cout<<"length is: "<< result;
+    return 0;
+}
 ```
