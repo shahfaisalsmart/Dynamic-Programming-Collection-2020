@@ -159,8 +159,8 @@ Given two sequences, find the length of longest subsequence present in both of t
 > For example, “abc”, “abg”, “bdf”, “aeg”, ‘”acefg”, .. etc are subsequences of “abcdefg”.
 
 **`Examples`**:
-LCS for input Sequences “ABCDGH” and “AEDFHR” is “ADH” of length 3.
-LCS for input Sequences “AGGTAB” and “GXTXAYB” is “GTAB” of length 4.
+- LCS for input Sequences “ABCDGH” and “AEDFHR” is “ADH” of length 3.
+- LCS for input Sequences “AGGTAB” and “GXTXAYB” is “GTAB” of length 4.
 #### `Input Format`
 First line is giving as N as Number of total element in an array.
 second line contains a<sub>1</sub>,a<sub>2</sub>,a<sub>3</sub>,a<sub>4</sub>,......a<sub>N</sub> as elements.
