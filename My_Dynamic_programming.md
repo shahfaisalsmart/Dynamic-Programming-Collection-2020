@@ -282,7 +282,39 @@ yzabcdezx
 ## C++ code `Recursive`
 
 ```cpp
-    coming soon
+// BEGINNING WITH THE NAME OF ALMIGHTY GOD ALLAH
+// AUTHOR:: MOHAMMAD FAISAL
+
+#include<bits/stdc++.h>
+using namespace std;
+int solve(string s, string t, int n, int m, int count)
+{
+    if(n==0 || m==0)
+        return count;
+
+    if(s[n-1] == t[m-1])
+        count = solve(s,t,n-1,m-1, count+1);
+    else
+        count = max(count, max(solve(s,t,n-1,m,0),solve(s,t,n,m-1,0)));
+    
+    return count;
+}
+int main(){
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+    cout.flush();
+
+    string s;
+    cin >> s;
+    int n = s.size();
+    string t;
+    cin >> t;
+    int m = t.size();
+    int count =0;
+    int res = solve(s,t,n,m,count);
+    cout<<res<<endl;
+    return 0;
+}
 ```
 
 ## C++ code `Iteratative`
