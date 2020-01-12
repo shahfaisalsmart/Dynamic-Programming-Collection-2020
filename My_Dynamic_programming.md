@@ -74,3 +74,55 @@ int main()
     return 0;
 }
 ```
+
+
+## C++ code with O(NlogN) time complexity `MOST EFFICIENT`
+
+```cpp
+// BEGINNING WITH THE NAME OF ALMIGHTY GOD ALLAH
+// AUTHOR:: MOHAMMAD FAISAL
+
+#include<bits/stdc++.h>
+using namespace std;
+int solve(int * arr, int n)
+{
+    if(n==0)
+        return 0;
+
+    vector<int> dp(n,0);
+
+    int length = 1;
+
+    dp[0] = arr[0];
+
+    for(int i=1;i<n;i++)
+    {
+        auto l = dp.begin(), r = dp.begin()+length;
+        auto smallest_Element = lower_bound(l,r,arr[i]);
+
+        if(smallest_Element == dp.begin() + length)
+            dp[length++] = arr[i];
+        else
+            *smallest_Element = arr[i];
+    }
+    return length;
+}
+int main(){
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+    cout.flush();
+
+    int n; cin >> n;
+    int * arr = new int[n];
+    
+    for(int i=0;i<n;i++)
+        cin >> arr[i];
+
+    int res = solve(arr,n);
+
+    cout<<"length is: "<<res;
+    delete[] arr;
+    return 0;
+}
+```
+---
