@@ -364,3 +364,83 @@ int main(){
 }
 ```
 ---
+## Dynamic Programming - `4`
+### Count Subarrays with equal 1s and 0s
+
+Given an array arr[] of size N containing 0s and 1s only. The task is to count the subarrays having equal number of 0s and 1s.
+
+### `Constraint`
+1 <= T <= 100
+
+1 <= N <= 10<sup>6</sup>
+
+0 <= A[i] <= 1
+
+#### `Input Format`
+The first line of input contains an integer T denoting the number of test cases. Then T test cases follow. Each test case consists of two lines. First line of each test case contains an Integer N denoting size of array and the second line contains N space separated 0 and 1.
+
+#### `Output Format`
+For each test case, print the count of required sub arrays in new line.
+
+#### Input 1
+2
+
+7
+
+1 0 0 1 0 1 1
+
+5
+
+1 1 1 1 0
+
+#### Output 1
+8
+
+1
+
+## C++ code `Iteratative`
+```c++
+    // BEGINNING WITH THE NAME OF ALMIGHTY GOD ALLAH
+// AUTHOR:: MOHAMMAD FAISAL
+#include<bits/stdc++.h>
+#define fast ios_base::sync_with_stdio(false); cin.tie(0); cout.tie(0);
+using namespace std;
+int main()
+ {
+    fast
+    int t;
+    cin >> t;
+    while(t--)
+    {
+        int n;
+        cin >> n;
+        int * arr = new int[n];
+        for(int i=0;i<n;i++)
+        {
+            int x;
+            cin >> x;
+            (x==1) ? arr[i] =1: arr[i] =-1;
+        }
+        
+        int sum = 0;
+        int subArray = 0;
+        
+        unordered_map<int,int> dp;
+        for(int i=0;i<n;i++)
+        {
+            sum +=arr[i];
+            if(sum==0) subArray++;
+            if(dp[sum]) subArray+=dp[sum];
+            if(dp[sum]==0)
+                dp[sum] =1;
+            else
+                dp[sum]++;
+        }
+        cout<<subArray<<"\n";
+        delete[] arr;
+    }
+	//code
+	return 0;
+}
+```
+---
